@@ -1,0 +1,117 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffe4e1; /* Light pink base */
+    background-image: radial-gradient(circle, #ff9aa2 1px, transparent 1px); /* Soft pink dots */
+    background-size: 20px 20px;
+    display: flex; /* Flexbox for centering */
+    justify-content: center; /* Horizontal centering */
+    align-items: center; /* Vertical centering */
+    min-height: 100vh; /* Ensure body takes full viewport height */
+    margin: 0; /* Remove any default margin */
+    padding: 0;
+    text-align: center;
+}
+
+.container {
+    max-width: 600px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 0 auto; /* Extra margin for smaller screens */
+}
+
+h1, h2 {
+    color: #ff6f61; /* Coral pink for headers */
+    font-size: 2.5em;
+}
+.quote {
+    font-style: italic;
+    margin-top: 20px;
+    padding-left: 20px;
+    border-left: 4px solid #e91e63;
+}
+button {
+    background-color: #ff9aa2; /* Soft pink for buttons */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff6f61; /* Slightly darker on hover */
+}
+
+.image-options, .photo-options {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    flex-wrap: wrap; /* Allow images to wrap on smaller screens */
+}
+
+.option-img, .photo-img {
+    max-width: 100%; /* Ensure image doesn't exceed the container width */
+    height: auto; /* Keep aspect ratio */
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    margin-bottom: 10px; /* Add spacing between images */
+}
+
+.option-img:hover, .photo-img:hover {
+    transform: scale(1.1);
+}
+
+#cake-area {
+    padding: 20px;
+}
+
+#hidden-cake {
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+/* Media Queries for Mobile Optimization */
+@media (max-width: 768px) {
+    h1, h2 {
+        font-size: 2em; /* Scale down headers for smaller screens */
+    }
+
+    .container {
+        padding: 15px; /* Reduce padding on mobile */
+    }
+
+    button {
+        padding: 8px 16px; /* Slightly smaller buttons */
+    }
+
+    .photo-options, .image-options {
+        flex-direction: column; /* Stack images vertically on small screens */
+    }
+
+    .option-img, .photo-img {
+        max-width: 80%; /* Keep images smaller on mobile */
+        margin: 0 auto 20px; /* Center images and add margin at the bottom */
+    }
+}
+
+@media (max-width: 480px) {
+    h1, h2 {
+        font-size: 1.8em; /* Further reduce header size on very small screens */
+    }
+
+    button {
+        padding: 6px 12px; /* Smaller buttons */
+    }
+
+    .photo-options, .image-options {
+        padding: 10px; /* Less padding around images */
+    }
+
+    .container {
+        padding: 10px; /* Even smaller padding */
+    }
+}
