@@ -1,3 +1,16 @@
+var audio = document.getElementById('myAudio');
+var playBtn = document.getElementById('playBtn');
+var pauseBtn = document.getElementById('pauseBtn');
+
+// Add event listeners to buttons
+playBtn.addEventListener('click', function() {
+    audio.play(); // Play the audio
+});
+
+pauseBtn.addEventListener('click', function() {
+    audio.pause(); // Pause the audio
+});
+
 // Challenge 1: Photo Selection
 function correctChoice() {
     
